@@ -49,7 +49,7 @@ $no = 1;
 
 	$pdf->Cell(10,7, '', 0,1);
 	$pdf->SetFont('Courier','B',20);
-	$pdf->Cell(80,10,'Total Pendapatan : ',1,0);
+	$pdf->Cell(80,10,'Total Pengeluaran : ',1,0);
 	$pdf->Cell(52,10, 'Rp.'. number_format($total),1,1);
  
 $pdf->Output();
