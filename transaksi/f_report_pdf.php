@@ -33,6 +33,7 @@ $pdf->Cell(25,6,'Total',1,1);
 $pdf->SetFont('Courier','',10);
  
 $no = 1;
+$total = 0;
 
         if(isset($_GET['tanggal_transaksi'])){
             $tgl = $_GET['tanggal_transaksi'];
@@ -73,8 +74,14 @@ $no = 1;
     } else if ($data['jenis_ambil'] == 'Ambil') {
     $pdf->Cell(25,6, 'Rp.'. number_format($total2),1,1);
     }
+    $total += $total2 + $antarq;
 	}
 }
+
+    $pdf->Cell(10,7, '', 0,1);
+    $pdf->SetFont('Courier','B',20);
+    $pdf->Cell(80,10,'Total Pendapatan : ',1,0);
+    $pdf->Cell(52,10, 'Rp.'. number_format($total),1,1);
  
 $pdf->Output();
 ?>
