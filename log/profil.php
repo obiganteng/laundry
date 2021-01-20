@@ -42,7 +42,7 @@
                 die ('username atau password tidak ditemukan');
             }
         ?>
-    <div class="contianer row">
+    <div class="container row">
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-header">
